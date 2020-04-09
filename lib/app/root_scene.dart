@@ -1,5 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_xbook/app/constant.dart';
+import 'package:flutter_xbook/app/sq_color.dart';
+import 'package:flutter_xbook/bookshelf/bookshelf_scene.dart';
+import 'package:flutter_xbook/home/home_scene.dart';
+import 'package:flutter_xbook/me/me_scene.dart';
+import 'package:flutter_xbook/utility/event_bus.dart';
 
 class RootScene extends StatefulWidget {
   @override
@@ -25,6 +31,13 @@ class RootSceneState extends State<RootScene> {
     super.initState();
 
     setupApp();
+
+    eventBus.on(EventToggleTabBarIndex,(arg){
+      setState(() {
+        _tabIndex = arg;
+      });
+    });
+
   }
 
   setupApp() async {
@@ -36,14 +49,14 @@ class RootSceneState extends State<RootScene> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: IndexedStack(
-          children: <Widget>[
-            BookshelfScene(),
-            HomeScene(),
-            MeScene(),
-          ],
-          index: _tabIndex,
-        ),
+      body: IndexedStack(
+        children: <Widget>[
+          BookshelfScene(),
+          HomeScene(),
+          MeScene(),
+        ],
+        index: _tabIndex,
+      ),
 
       bottomNavigationBar: CupertinoTabBar(
         backgroundColor: Colors.white,

@@ -14,7 +14,7 @@ class MeSceneState extends State<MeScene> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(widget.title),
+          title: Text("我的"),
         ),
         body: Center(
           child: Column(),

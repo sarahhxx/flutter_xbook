@@ -14,7 +14,7 @@ class BookshelfSceneState extends State<BookshelfScene> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(widget.title),
+          title: Text("书架"),
         ),
         body: Center(
           child: Column(),

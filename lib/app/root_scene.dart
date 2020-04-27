@@ -16,14 +16,26 @@ class RootSceneState extends State<RootScene> {
   int _tabIndex = 1;
   bool isFinishSetup = false;
   List<Image> _tabImages = [
-    Image.asset('img/tab_bookshelf_n.png'),
-    Image.asset('img/tab_bookstore_n.png'),
-    Image.asset('img/tab_me_n.png'),
+    Image.asset('img/tab_bookshelf_n.png',
+      width: 20,
+      height: 20,),
+    Image.asset('img/tab_bookstore_n.png',
+      width: 20,
+      height: 20,),
+    Image.asset('img/tab_me_n.png',
+      width: 20,
+      height: 20,),
   ];
   List<Image> _tabSelectedImages = [
-    Image.asset('img/tab_bookshelf_p.png'),
-    Image.asset('img/tab_bookstore_p.png'),
-    Image.asset('img/tab_me_p.png'),
+    Image.asset('img/tab_bookshelf_p.png',
+      width: 20,
+      height: 20,),
+    Image.asset('img/tab_bookstore_p.png',
+      width: 20,
+      height: 20,),
+    Image.asset('img/tab_me_p.png',
+      width: 20,
+      height: 20,),
   ];
 
   @override

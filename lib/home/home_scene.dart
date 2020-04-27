@@ -14,7 +14,7 @@ class HomeSceneState extends State<HomeScene> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(widget.title),
+          title: Text("书城"),
         ),
         body: Center(
           child: Column(),
